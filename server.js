@@ -6,9 +6,14 @@ const colors = require("colors");
 const app = require("./app");
 
 // database connection
-mongoose.connect(process.env.DATABASE).then(() => {
-  console.log(`Database Connection is successful`.red.bold);
-});
+mongoose
+  .connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log(`Database Connection is successful`.green.bold);
+  });
 
 // server
 const port = process.env.PORT || 8080;
