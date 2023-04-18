@@ -31,13 +31,15 @@ const productSchema = mongoose.Schema(
       type: Number,
       required: true,
       min: [0, "Quantity cant be negative"],
-      validate: value => {
-        const isInteger = Number.isInteger(value);
-        if (isInteger) {
-          return true;
-        } else {
-          return false;
-        }
+      validate: {
+        validator: value => {
+          const isInteger = Number.isInteger(value);
+          if (isInteger) {
+            return true;
+          } else {
+            return false;
+          }
+        },
       },
       message: "Quantity must be an integer",
     },
@@ -86,10 +88,10 @@ productSchema.pre("save", function (next) {
   next();
 });
 
-productSchema.post("save", function (doc, next) {
-  console.log("after saving data");
-  next();
-});
+// productSchema.post("save", function (doc, next) {
+//   console.log("after saving data");
+//   next();
+// });
 
 productSchema.methods.logger = function () {
   console.log(`Data saved for ${this.name}`);
@@ -100,3 +102,4 @@ productSchema.methods.logger = function () {
 const Product = mongoose.model("Product", productSchema);
 
 module.exports = Product;
+// await Product.create(req.body);

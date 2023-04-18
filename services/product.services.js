@@ -1,8 +1,17 @@
 const Product = require("../models/Product");
+const mockData = require("../data/mock-data.json");
 
-exports.getProductService = async () => {
-  const products = Product.find({});
-  return products;
+exports.getProductService = async (filters, queries) => {
+  const products = await Product.find(filters)
+    .skip(queries.skip)
+    .limit(queries.limit)
+    .select(queries.fields)
+    .sort(queries.sortBy);
+
+  const total = await Product.countDocuments(filters);
+  const page = Math.ceil(total / queries.limit);
+
+  return { total, page, products };
 };
 
 exports.createProductService = async data => {
@@ -22,23 +31,28 @@ exports.updateProductByIdService = async (productId, data) => {
   return result;
 };
 
-exports.bulkUpdateProductService = async data => {
+exports.bulkUpdateProductService = async () => {
   // console.log(data.ids, data.data);
+
   // const result = await Product.updateMany({ _id: data.ids }, data.data, {
   //   runValidators: true,
   // });
   const products = [];
 
-  data.ids.forEach(product => {
-    products.push(Product.updateOne({ _id: product.id }, product.data));
+  // mockData.forEach(product => {
+  //   products.push(Product.updateOne({ _id: product.id }, product.data));
+  // });
+  mockData.forEach(product => {
+    products.push(Product.create(product));
   });
 
   const result = await Promise.all(products);
+  // console.log(result);
   return result;
 };
 
-exports.bulkDeleteProductService = async id => {
-  const result = await Product.deleteMany({ _id: id });
+exports.bulkDeleteProductService = async () => {
+  const result = await Product.deleteMany({});
   return result;
 };
 

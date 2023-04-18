@@ -1,3 +1,4 @@
+const { query } = require("express");
 const Product = require("../models/Product");
 const {
   getProductService,
@@ -12,7 +13,45 @@ exports.getProducts = async (req, res) => {
   try {
     // const product = await Product.findById("6434cc28af8a8830b414c575");
 
-    const products = await getProductService();
+    // { price: { $gt: 50 } }
+    // { price: { gt: '12' } }
+    // { price: { '$gt': '12' } }
+    // console.log(req.query);
+
+    let filters = { ...req.query };
+
+    const excludeFields = ["sort", "page", "limit"];
+    excludeFields.forEach(field => delete filters[field]);
+
+    let filtersString = JSON.stringify(filters);
+    filtersString = filtersString.replace(
+      /\b(gt|gte|lt|lte)\b/g,
+      match => `$${match}`
+    );
+    filters = JSON.parse(filtersString);
+
+    const queries = {};
+
+    if (req.query.sort) {
+      const sortBy = req.query.sort.split(",").join(" ");
+      queries.sortBy = sortBy;
+      console.log(sortBy);
+    }
+
+    if (req.query.fields) {
+      const fields = req.query.fields.split(",").join(" ");
+      console.log(fields);
+      queries.fields = fields;
+    }
+
+    if (req.query.page) {
+      const { page = 1, limit = 10 } = req.query;
+      const skip = (page - 1) * parseInt(limit);
+      queries.skip = skip;
+      queries.limit = parseInt(limit);
+    }
+
+    const products = await getProductService(filters, queries);
     //   .equals(/\w/)
     // .equals(/^[A-Za-z\s-]+$/)
 
@@ -83,6 +122,7 @@ exports.updateProductById = async (req, res) => {
     res.status(200).json({
       status: "Success",
       message: "Successfully updated the Product",
+      data: result,
     });
   } catch (error) {
     res.status(400).json({
@@ -95,7 +135,8 @@ exports.updateProductById = async (req, res) => {
 
 exports.bulkUpdateProduct = async (req, res) => {
   try {
-    const result = await bulkUpdateProductService(req.body);
+    // const result = await bulkUpdateProductService(req.body);
+    const result = await bulkUpdateProductService();
     res.status(200).json({
       status: "Success",
       message: "Successfully updated the Product",
