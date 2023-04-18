@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+// const validator = require("validator");
+const { ObjectId } = mongoose.Schema.Types;
 
 const productSchema = mongoose.Schema(
   {
@@ -23,10 +25,47 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
       enum: {
-        values: ["kg", "litre", "pcs"],
+        values: ["kg", "litre", "pcs", "bag"],
         message: "unit value cant be {VALUE}, must be kg/li/pcs",
       },
     },
+    imageURLs: [
+      {
+        type: String,
+        required: true,
+        validate: {
+          validator: value => {
+            if (!Array.isArray(value)) {
+              return false;
+            }
+            let isValid = true;
+            value.forEach(url => {
+              if (!validator.isURL(url)) {
+                isValid = false;
+              }
+            });
+            return isValid;
+          },
+          message: "Please provide valid image urls",
+        },
+      },
+    ],
+
+    category: {
+      type: String,
+      required: true,
+    },
+
+    brand: {
+      type: String,
+      required: true,
+      id: {
+        type: ObjectId,
+        ref: "Brand",
+        required: true,
+      },
+    },
+
     quantity: {
       type: Number,
       required: true,
@@ -51,30 +90,9 @@ const productSchema = mongoose.Schema(
         message: "Status cant be {VALUE}",
       },
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-    },
-    updatedAt: {
-      type: Date,
-      default: Date.now,
-    },
-    // supplier: {
-    //   type: mongoose.Schema.Types.ObjectId,
-    //   ref: "Supplier",
-    // },
-    // categories: [
-    //   {
-    //     name: {
-    //       type: String,
-    //       required: true,
-    //     },
-    //     _id: mongoose.Schema.Types.ObjectId,
-    //   },
-    // ],
   },
   {
-    timeStamps: true,
+    timestamps: true,
   }
 );
 
