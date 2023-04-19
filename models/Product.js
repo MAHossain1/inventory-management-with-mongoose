@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-// const validator = require("validator");
+const valid = require("validator");
 const { ObjectId } = mongoose.Schema.Types;
 
 const productSchema = mongoose.Schema(
@@ -29,27 +29,36 @@ const productSchema = mongoose.Schema(
         message: "unit value cant be {VALUE}, must be kg/li/pcs",
       },
     },
+
     imageURLs: [
       {
         type: String,
         required: true,
-        validate: {
-          validator: value => {
-            if (!Array.isArray(value)) {
-              return false;
-            }
-            let isValid = true;
-            value.forEach(url => {
-              if (!validator.isURL(url)) {
-                isValid = false;
-              }
-            });
-            return isValid;
-          },
-          message: "Please provide valid image urls",
-        },
+        validate: [valid.isURL, "wrong url"],
       },
     ],
+
+    // imageURLs: [
+    //   {
+    //     type: String,
+    //     required: true,
+    //     validate: {
+    //       validator: value => {
+    //         if (!Array.isArray(value)) {
+    //           return false;
+    //         }
+    //         let isValid = true;
+    //         value.forEach(url => {
+    //           if (!validator.isURL(url)) {
+    //             isValid = false;
+    //           }
+    //         });
+    //         return isValid;
+    //       },
+    //       message: "Please provide valid image urls",
+    //     },
+    //   },
+    // ],
 
     category: {
       type: String,
@@ -57,8 +66,10 @@ const productSchema = mongoose.Schema(
     },
 
     brand: {
-      type: String,
-      required: true,
+      name: {
+        type: String,
+        required: true,
+      },
       id: {
         type: ObjectId,
         ref: "Brand",
