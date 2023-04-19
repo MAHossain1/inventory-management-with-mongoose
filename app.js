@@ -8,6 +8,7 @@ app.use(cors());
 
 // routes
 const productRoute = require("./routes/product.route.js");
+const brandRoute = require("./routes/brand.route.js");
 
 // schema design
 
@@ -18,5 +19,6 @@ app.get("/", (req, res) => {
 // POSTING TO DATABASE
 
 app.use("/api/v1/product", productRoute);
+app.use("/api/v1/brand", brandRoute);
 
 module.exports = app;
