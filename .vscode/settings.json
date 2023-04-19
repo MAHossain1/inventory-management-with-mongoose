@@ -18,5 +18,6 @@
     "commandCenter.border": "#15202b99"
   },
   "peacock.color": "#55b04f",
-  "editor.fontLigatures": false
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "fira code, Consolas, 'Courier New', monospace"
 }

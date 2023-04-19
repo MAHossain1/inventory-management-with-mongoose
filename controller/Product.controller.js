@@ -9,6 +9,12 @@ const {
   bulkDeleteProductService,
 } = require("../services/product.services");
 
+exports.fileUpload = async (req, res) => {
+  try {
+    res.status(200).json(req.files);
+  } catch (error) {}
+};
+
 exports.getProducts = async (req, res) => {
   try {
     // const product = await Product.findById("6434cc28af8a8830b414c575");
