@@ -16,9 +16,10 @@ exports.updateSupplierByIdService = async (supplierId, data) => {
     { $inc: data },
     { runValidators: true }
   );
+  return result;
 };
 
 exports.getSupplierByIdService = async supplierId => {
-  const result = await Supplier.find({ _id: supplierId });
+  const result = await Supplier.findOne({ _id: supplierId });
   return result;
 };

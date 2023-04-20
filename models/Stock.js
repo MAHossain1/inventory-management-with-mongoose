@@ -13,7 +13,6 @@ const stockSchema = mongoose.Schema(
       type: String,
       required: [true, "Please enter a Stock name"],
       trim: true,
-      unique: [true, "Please Give a Unique Name"],
       minLength: [3, "Name must be at least 3 character"],
       maxLength: [100, "Name is too large"],
     },
@@ -29,25 +28,11 @@ const stockSchema = mongoose.Schema(
         message: "unit value Can't be {Value}, should be hour/day/week",
       },
     },
-    imageURL: [
+    imageURLs: [
       {
         type: String,
         required: true,
-        validate: {
-          validator: value => {
-            if (!Array.isArray(value)) {
-              return false;
-            }
-            let isValid = true;
-            value.forEach(url => {
-              if (!validator.isURL(url)) {
-                isValid = false;
-              }
-            });
-            return isValid;
-          },
-          message: "Please provide valid url",
-        },
+        validate: [validator.isURL, "Please provide valid url(s)"],
       },
     ],
     price: {
@@ -66,8 +51,10 @@ const stockSchema = mongoose.Schema(
       required: true,
     },
     brand: {
-      type: String,
-      required: true,
+      name: {
+        type: String,
+        required: true,
+      },
       id: {
         type: ObjectId,
         ref: "Brand",
@@ -117,6 +104,11 @@ const stockSchema = mongoose.Schema(
         type: ObjectId,
         ref: "Supplier",
       },
+    },
+    sellCount: {
+      type: Number,
+      default: 0,
+      min: 0,
     },
   },
   {

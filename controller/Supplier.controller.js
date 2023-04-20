@@ -3,20 +3,20 @@ const {
   getSuppliersService,
   updateSupplierByIdService,
   getSupplierByIdService,
-} = require("../services/supplier.service");
+} = require("../services/supplier.service.js");
 
-exports.createSupplier = async (req, res, next) => {
+exports.createSupplier = async (req, res) => {
   try {
     const result = await createSupplierService(req.body);
     res.status(200).json({
-      status: "Success",
-      message: "Successfully created the Supplier",
+      status: "success",
+      message: "Successfully created the supplier",
       data: result,
     });
   } catch (error) {
     res.status(400).json({
-      status: "Failed",
-      error: "Couldn't create the Supplier",
+      status: "fail",
+      error: "Couldn't create the supplier",
     });
   }
 };
@@ -58,7 +58,7 @@ exports.updateSupplierById = async (req, res) => {
 exports.getSupplierById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const store = await getSupplierByIdService(id);
+    const supplier = await getSupplierByIdService(id);
     if (!supplier) {
       return res.status(400).json({
         status: "Fail",
@@ -68,9 +68,10 @@ exports.getSupplierById = async (req, res, next) => {
     res.status(200).json({
       status: "Success",
       message: "Successfully get the supplier",
-      data: store,
+      data: supplier,
     });
   } catch (error) {
+    console.log(error);
     res.status(400).json({
       status: "Failed",
       error: "Couldn't get the supplier",

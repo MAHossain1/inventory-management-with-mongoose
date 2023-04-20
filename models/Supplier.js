@@ -6,7 +6,7 @@ const supplierSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      required: [true, "Please provide a name"],
       trim: true,
       lowercase: true,
       minLength: [3, "Name must be at least 3 characters."],
@@ -53,9 +53,9 @@ const supplierSchema = mongoose.Schema(
         message: "_Please Provide a valid emergency phone Number",
       },
     },
-    tradeLicenseNumber: {
+    tradeLicenceNumber: {
       type: Number,
-      required: [true, "Please Provide your trade license Number"],
+      required: [true, "Please Provide your trade licence Number"],
     },
     presentAddress: {
       type: String,
@@ -87,7 +87,7 @@ const supplierSchema = mongoose.Schema(
       type: String,
       validate: [validator.isURL, "Please provide a valid url"],
     },
-    nationIdImageURL: {
+    nationalIdImageURL: {
       type: String,
       required: true,
       validate: [validator.isURL, "Please provide a valid url"],

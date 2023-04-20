@@ -1,6 +1,6 @@
 [
   {
-    "productId": "633476cce0259f4febbfc437",
+    "productId": "643f853af12cd684bbf24679",
     "name": "Pran Chinigura Aromatic Rice - 5kg Bag",
     "description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -14,20 +14,20 @@
     "category": "Rice",
     "brand": {
       "name": "Pran",
-      "id": "633177da56be8326a827b812"
+      "id": "643f878bf12cd684bbf24686"
     },
     "store": {
-      "name": "chattogram",
-      "id": "633412b419894112041a9018"
+      "name": "dhaka",
+      "id": "643f4b2db52fa42100bef663"
     },
     "suppliedBy": {
       "name": "mezbaul abedin persian",
-      "id": "63341c683d8c200adc31b6b6"
+      "id": "6440fa1284d3682a405373ce"
     },
     "sellCount": 50
   },
   {
-    "productId": "633476cce0259f4febbfc438",
+    "productId": "643f853af12cd684bbf2467a",
     "name": "Pran Chinigura Aromatic Rice - 50kg",
     "description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -39,7 +39,7 @@
     "category": "Rice",
     "brand": {
       "name": "Pran",
-      "id": "633177da56be8326a827b812"
+      "id": "643f878bf12cd684bbf24686"
     },
     "store": {
       "name": "chattogram",
@@ -47,12 +47,12 @@
     },
     "suppliedBy": {
       "name": "mezbaul abedin persian",
-      "id": "63341c683d8c200adc31b6b6"
+      "id": "6440fa1284d3682a405373ce"
     },
     "sellCount": 10
   },
   {
-    "productId": "633476cce0259f4febbfc439",
+    "productId": "643f853af12cd684bbf2467b",
     "name": "Pran Nazirshail Rice - 5kg",
     "description": "Pran Nazirshail Rice. Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -64,7 +64,7 @@
     "category": "Rice",
     "brand": {
       "name": "Pran",
-      "id": "633177da56be8326a827b812"
+      "id": "643f878bf12cd684bbf24686"
     },
     "store": {
       "name": "chattogram",
@@ -72,12 +72,12 @@
     },
     "suppliedBy": {
       "name": "mezbaul abedin persian",
-      "id": "63341c683d8c200adc31b6b6"
+      "id": "6440fa1284d3682a405373ce"
     },
     "sellCount": 90
   },
   {
-    "productId": "633476cce0259f4febbfc43a",
+    "productId": "643fb824010be72c58611549",
     "name": "Fresh Chinigura Rice",
     "description": "Fresh Chinigura Rice. Fresh and Clean, Vacuum Packed. Fresh Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -88,7 +88,7 @@
     "category": "Rice",
     "brand": {
       "name": "Fresh",
-      "id": "6329f32f40244f2a44c85741"
+      "id": "643f878bf12cd684bbf24684"
     },
     "store": {
       "name": "chattogram",
@@ -96,12 +96,12 @@
     },
     "suppliedBy": {
       "name": "rasel ahmed",
-      "id": "63341cd73d8c200adc31b6bd"
+      "id": "6440f98f84d3682a405373ca"
     },
     "sellCount": 17
   },
   {
-    "productId": "633476cce0259f4febbfc43b",
+    "productId": "643f853af12cd684bbf2467d",
     "name": "ACI Pure Miniket Rice Premium",
     "description": "ACI Pure Miniket Rice Premium. Fresh and Clean, Vacuum Packed. ACI Pure Miniket Rice Premium can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -125,7 +125,7 @@
     "sellCount": 103
   },
   {
-    "productId": "633476cce0259f4febbfc43c",
+    "productId": "643fb8d1010be72c5861154f",
     "name": "Fresh Fortified Soyabean Oil - 5ltr",
     "description": "Fresh Fortified Soyabean Oil follows 3 steps of refining process-Perfect Degumming & Neutralization, Balanced De-colorization and Five steps Deodorization to ensure right ratio of Omega 3 & 6 and intact Beta-carotene in Soyabean Oil. Fresh soyabean oil contain vitamin A. Its fresh and healthy.",
     "imageURLs": [
@@ -136,7 +136,7 @@
     "category": "Oil",
     "brand": {
       "name": "Fresh",
-      "id": "6329f32f40244f2a44c85741"
+      "id": "643f878bf12cd684bbf24684"
     },
     "store": {
       "name": "chattogram",
@@ -144,36 +144,12 @@
     },
     "suppliedBy": {
       "name": "rasel ahmed",
-      "id": "63341cd73d8c200adc31b6bd"
+      "id": "6440f98f84d3682a405373ca"
     },
     "sellCount": 20
   },
   {
-    "productId": "633476cce0259f4febbfc43d",
-    "name": "Rupchanda Fortified Soyabean Oil - 5ltr",
-    "description": "First Vitamin A fortified Soyabean Oil. Increases immunity. Strengthens bone & teeth.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/rupchanda-fortified-soyabean-oil-5-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D92500&q=best&v=1&m=400&webp=1"
-    ],
-    "unit": "litre",
-    "price": "450",
-    "category": "Oil",
-    "brand": {
-      "name": "Rupchanda",
-      "id": "6329f4a69c503f0b7438b25e"
-    },
-    "store": {
-      "name": "chattogram",
-      "id": "633412b419894112041a9018"
-    },
-    "suppliedBy": {
-      "name": "anisul islam",
-      "id": "63347a6e92cc9521ec423711"
-    },
-    "sellCount": 50
-  },
-  {
-    "productId": "633476cce0259f4febbfc43e",
+    "productId": "643f853af12cd684bbf24680",
     "name": "Fresh Refined Sugar",
     "description": "Fresh Refined sugar is a modern processes of without touching hand to protect the health of assurance. Fresh refined sugar is completely acid, fecal residues free and neat and clean, healthy, granulated sugar.",
     "imageURLs": [
@@ -184,7 +160,7 @@
     "category": "Sugar",
     "brand": {
       "name": "Fresh",
-      "id": "6329f32f40244f2a44c85741"
+      "id": "643f878bf12cd684bbf24684"
     },
     "store": {
       "name": "chattogram",
@@ -192,12 +168,12 @@
     },
     "suppliedBy": {
       "name": "rasel ahmed",
-      "id": "63341cd73d8c200adc31b6bd"
+      "id": "6440f98f84d3682a405373ca"
     },
     "sellCount": 11
   },
   {
-    "productId": "633476cce0259f4febbfc43f",
+    "productId": "643fbc2756c38046f42b52f2",
     "name": "Teer Refined Sugar",
     "description": "Teer Refined sugar is a modern processes of without touching hand to protect the health of assurance. Fresh refined sugar is completely acid, fecal residues free and neat and clean, healthy, granulated sugar.",
     "imageURLs": [
@@ -214,13 +190,13 @@
       "id": "633412b419894112041a9018"
     },
     "suppliedBy": {
-      "name": "shahbaj khan toky",
-      "id": "63347a4392cc9521ec42370f"
+      "name": "mezbaul abedin persian",
+      "id": "6440fa1284d3682a405373ce"
     }
   },
 
   {
-    "productId": "633476cce0259f4febbfc437",
+    "productId": "643f853af12cd684bbf24679",
     "name": "Pran Chinigura Aromatic Rice - 5kg Bag",
     "description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -234,20 +210,20 @@
     "category": "Rice",
     "brand": {
       "name": "Pran",
-      "id": "633177da56be8326a827b812"
+      "id": "643f878bf12cd684bbf24686"
     },
     "store": {
       "name": "dhaka",
-      "id": "63316b54df4cc92bd0d74f2d"
+      "id": "643f4b2db52fa42100bef663"
     },
     "suppliedBy": {
       "name": "razu biswas",
-      "id": "633479c792cc9521ec42370b"
+      "id": "64417c9672112715b042c86b"
     },
     "sellCount": 50
   },
   {
-    "productId": "633476cce0259f4febbfc438",
+    "productId": "643f853af12cd684bbf2467a",
     "name": "Pran Chinigura Aromatic Rice - 50kg",
     "description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -259,20 +235,20 @@
     "category": "Rice",
     "brand": {
       "name": "Pran",
-      "id": "633177da56be8326a827b812"
+      "id": "643f878bf12cd684bbf24686"
     },
     "store": {
       "name": "dhaka",
-      "id": "63316b54df4cc92bd0d74f2d"
+      "id": "643f4b2db52fa42100bef663"
     },
     "suppliedBy": {
       "name": "razu biswas",
-      "id": "633479c792cc9521ec42370b"
+      "id": "64417c9672112715b042c86b"
     },
     "sellCount": 10
   },
   {
-    "productId": "633476cce0259f4febbfc439",
+    "productId": "643f853af12cd684bbf2467b",
     "name": "Pran Nazirshail Rice - 5kg",
     "description": "Pran Nazirshail Rice. Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -284,20 +260,20 @@
     "category": "Rice",
     "brand": {
       "name": "Pran",
-      "id": "633177da56be8326a827b812"
+      "id": "643f878bf12cd684bbf24686"
     },
     "store": {
       "name": "dhaka",
-      "id": "63316b54df4cc92bd0d74f2d"
+      "id": "643f4b2db52fa42100bef663"
     },
     "suppliedBy": {
       "name": "razu biswas",
-      "id": "633479c792cc9521ec42370b"
+      "id": "64417c9672112715b042c86b"
     },
     "sellCount": 90
   },
   {
-    "productId": "633476cce0259f4febbfc43a",
+    "productId": "643fb824010be72c58611549",
     "name": "Fresh Chinigura Rice",
     "description": "Fresh Chinigura Rice. Fresh and Clean, Vacuum Packed. Fresh Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -308,20 +284,20 @@
     "category": "Rice",
     "brand": {
       "name": "Fresh",
-      "id": "6329f32f40244f2a44c85741"
+      "id": "643f878bf12cd684bbf24684"
     },
     "store": {
       "name": "dhaka",
-      "id": "63316b54df4cc92bd0d74f2d"
+      "id": "643f4b2db52fa42100bef663"
     },
     "suppliedBy": {
-      "name": "shakil ahmed atik",
-      "id": "6334799092cc9521ec423707"
+      "name": "abdullah al fahim",
+      "id": "6440f96484d3682a405373c6"
     },
     "sellCount": 17
   },
   {
-    "productId": "633476cce0259f4febbfc43b",
+    "productId": "643f853af12cd684bbf2467d",
     "name": "ACI Pure Miniket Rice Premium",
     "description": "ACI Pure Miniket Rice Premium. Fresh and Clean, Vacuum Packed. ACI Pure Miniket Rice Premium can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
     "imageURLs": [
@@ -336,16 +312,16 @@
     },
     "store": {
       "name": "dhaka",
-      "id": "63316b54df4cc92bd0d74f2d"
+      "id": "643f4b2db52fa42100bef663"
     },
     "suppliedBy": {
-      "name": "mir hussain",
-      "id": "6334794f92cc9521ec423705"
+      "name": "jhankar mahbub",
+      "id": "6440f97f84d3682a405373c8"
     },
     "sellCount": 103
   },
   {
-    "productId": "633476cce0259f4febbfc43c",
+    "productId": "643fb8d1010be72c5861154f",
     "name": "Fresh Fortified Soyabean Oil - 5ltr",
     "description": "Fresh Fortified Soyabean Oil follows 3 steps of refining process-Perfect Degumming & Neutralization, Balanced De-colorization and Five steps Deodorization to ensure right ratio of Omega 3 & 6 and intact Beta-carotene in Soyabean Oil. Fresh soyabean oil contain vitamin A. Its fresh and healthy.",
     "imageURLs": [
@@ -356,44 +332,21 @@
     "category": "Oil",
     "brand": {
       "name": "Fresh",
-      "id": "6329f32f40244f2a44c85741"
+      "id": "643f878bf12cd684bbf24684"
     },
     "store": {
       "name": "dhaka",
-      "id": "63316b54df4cc92bd0d74f2d"
+      "id": "643f4b2db52fa42100bef663"
     },
     "suppliedBy": {
-      "name": "shakil ahmed atik",
-      "id": "6334799092cc9521ec423707"
+      "name": "abdullah al fahim",
+      "id": "6440f96484d3682a405373c6"
     },
     "sellCount": 20
   },
+
   {
-    "productId": "633476cce0259f4febbfc43d",
-    "name": "Rupchanda Fortified Soyabean Oil - 5ltr",
-    "description": "First Vitamin A fortified Soyabean Oil. Increases immunity. Strengthens bone & teeth.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/rupchanda-fortified-soyabean-oil-5-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D92500&q=best&v=1&m=400&webp=1"
-    ],
-    "unit": "litre",
-    "price": "450",
-    "category": "Oil",
-    "brand": {
-      "name": "Rupchanda",
-      "id": "6329f4a69c503f0b7438b25e"
-    },
-    "store": {
-      "name": "dhaka",
-      "id": "63316b54df4cc92bd0d74f2d"
-    },
-    "suppliedBy": {
-      "name": "jhankar mahbub",
-      "id": "63341ccb3d8c200adc31b6bb"
-    },
-    "sellCount": 50
-  },
-  {
-    "productId": "633476cce0259f4febbfc43e",
+    "productId": "643f853af12cd684bbf24680",
     "name": "Fresh Refined Sugar",
     "description": "Fresh Refined sugar is a modern processes of without touching hand to protect the health of assurance. Fresh refined sugar is completely acid, fecal residues free and neat and clean, healthy, granulated sugar.",
     "imageURLs": [
@@ -404,20 +357,20 @@
     "category": "Sugar",
     "brand": {
       "name": "Fresh",
-      "id": "6329f32f40244f2a44c85741"
+      "id": "643f878bf12cd684bbf24684"
     },
     "store": {
       "name": "dhaka",
-      "id": "63316b54df4cc92bd0d74f2d"
+      "id": "643f4b2db52fa42100bef663"
     },
     "suppliedBy": {
-      "name": "shakil ahmed atik",
-      "id": "6334799092cc9521ec423707"
+      "name": "abdullah al fahim",
+      "id": "6440f96484d3682a405373c6"
     },
     "sellCount": 11
   },
   {
-    "productId": "633476cce0259f4febbfc43f",
+    "productId": "643fbc2756c38046f42b52f2",
     "name": "Teer Refined Sugar",
     "description": "Teer Refined sugar is a modern processes of without touching hand to protect the health of assurance. Fresh refined sugar is completely acid, fecal residues free and neat and clean, healthy, granulated sugar.",
     "imageURLs": [
@@ -431,11 +384,11 @@
     },
     "store": {
       "name": "dhaka",
-      "id": "63316b54df4cc92bd0d74f2d"
+      "id": "643f4b2db52fa42100bef663"
     },
     "suppliedBy": {
       "name": "abdullah al fahim",
-      "id": "63341ca23d8c200adc31b6b9"
+      "id": "6440f96484d3682a405373c6"
     }
   }
 ]

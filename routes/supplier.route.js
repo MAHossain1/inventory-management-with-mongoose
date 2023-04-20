@@ -4,8 +4,8 @@ const supplierController = require("../controller/Supplier.controller");
 
 router
   .route("/")
-  .get(supplierController.getSuppliers)
-  .post(supplierController.createSupplier);
+  .post(supplierController.createSupplier)
+  .get(supplierController.getSuppliers);
 
 router
   .route("/:id")
