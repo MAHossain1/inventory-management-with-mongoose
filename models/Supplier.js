@@ -1,0 +1,108 @@
+const mongoose = require("mongoose");
+const validator = require("validator");
+const { ObjectId } = mongoose.Schema.Types;
+
+const supplierSchema = mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      trim: true,
+      lowercase: true,
+      minLength: [3, "Name must be at least 3 characters."],
+      maxLength: [100, "Name is too large"],
+    },
+    email: {
+      type: String,
+      validate: [validator.isEmail, "Provide a valid Email"],
+      trim: true,
+      lowercase: true,
+      unique: true,
+    },
+    brand: {
+      name: {
+        type: String,
+        trim: true,
+        required: true,
+      },
+      id: {
+        type: ObjectId,
+        ref: "Brand",
+        required: true,
+      },
+    },
+    contactNumber: [
+      {
+        type: String,
+        required: [true, "Please Provide a contact number"],
+        validate: {
+          validator: value => {
+            return validator.isMobilePhone(value);
+          },
+          message: "_Please Provide a valid phone Number",
+        },
+      },
+    ],
+    emergencyContactNumber: {
+      type: String,
+      required: [true, "Please Provide a emergency contact number"],
+      validate: {
+        validator: value => {
+          return validator.isMobilePhone(value);
+        },
+        message: "_Please Provide a valid emergency phone Number",
+      },
+    },
+    tradeLicenseNumber: {
+      type: Number,
+      required: [true, "Please Provide your trade license Number"],
+    },
+    presentAddress: {
+      type: String,
+      required: [true, "Provide your present address"],
+    },
+    permanentAddress: {
+      type: String,
+      required: [true, "Provide your permanent address"],
+    },
+    location: {
+      type: String,
+      required: true,
+      lowercase: true,
+      enum: {
+        values: [
+          "dhaka",
+          "rajshahi",
+          "chattogram",
+          "sylhet",
+          "khulna",
+          "barishal",
+          "rangpur",
+          "mymenshingh",
+        ],
+        message: "{VALUE} is not correct division",
+      },
+    },
+    imageURL: {
+      type: String,
+      validate: [validator.isURL, "Please provide a valid url"],
+    },
+    nationIdImageURL: {
+      type: String,
+      required: true,
+      validate: [validator.isURL, "Please provide a valid url"],
+    },
+    status: {
+      type: String,
+      default: "active",
+      enum: ["active", "inactive"],
+    },
+  },
+  {
+    timestamp: true,
+  }
+);
+
+const Supplier = mongoose.model("Supplier", supplierSchema);
+
+module.exports = Supplier;
