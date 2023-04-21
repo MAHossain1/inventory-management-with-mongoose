@@ -3,6 +3,8 @@ const productController = require("../controller/Product.controller");
 const router = express.Router();
 
 const uploader = require("../middleware/uploader");
+const verifyToken = require("../middleware/verifyToken");
+const authorization = require("../middleware/authorization");
 
 router.post(
   "/file-upload",
@@ -16,7 +18,11 @@ router.route("/bulk-delete").delete(productController.bulkDeleteProduct);
 router
   .route("/")
   .get(productController.getProducts)
-  .post(productController.createProduct);
+  .post(
+    verifyToken,
+    authorization("admin", "store-manager"),
+    productController.createProduct
+  );
 
 router
   .route("/:id")
